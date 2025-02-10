@@ -214,8 +214,8 @@
             { title: "Current Time", info: "8:35 AM." },
             { title: "Address of Origin", info: "5108 Drawbridge Ct, Royersford, PA 19468." },
             { title: "Address of Destination", info: "2211 Chapel Ave W Suite 101, Cherry Hill, NJ 08002." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "41.84 miles." },
+            { title: "Estimated Time to Destination", info: "79 minutes." },
             { title: "State of Charge of Battery", info: "26% charge." },
             { title: "Range of Current Battery", info: "78 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "58.5 miles." },
@@ -233,10 +233,10 @@
                 name: 'Upper Merion Township Library',
 
                 location: '175 West Valley Forge Rd, King of Prussia 19406',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '16.25',
+                originTime: '24',
+                destDistance: '27.26',
+                destTime: '58',
 
                 waitTime: [
                         { type: 'J1772', value: '43' }
@@ -272,10 +272,10 @@
                 name: 'Old City Parking',
 
                 location: '304 Race Street, Philadelphia, PA 19106',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '34.72',
+                originTime: '59',
+                destDistance: '8.6',
+                destTime: '18',
 
                 
                 waitTime: [
@@ -946,8 +946,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
